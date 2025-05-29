@@ -58,4 +58,8 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
   --endpoint-url=http://localhost:4566
   ```
 
+## Abrir el proyecto con GitHub Codespaces
+
+Puedes abrir y trabajar en este proyecto directamente en la nube usando [GitHub Codespaces](https://github.com/features/codespaces). Solo haz clic en el botón **"Code"** y selecciona **"Open with Codespaces"** para iniciar un entorno de desarrollo completo y preconfigurado.
+
 ---
