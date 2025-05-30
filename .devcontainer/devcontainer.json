@@ -1,6 +1,8 @@
 {
 	"name": "LocalStack DinD setup",
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 
 	"remoteEnv": {
 		// Activate LocalStack Pro: https://docs.localstack.cloud/getting-started/auth-token/
@@ -16,7 +18,7 @@
 		"ENFORCE_IAM": false,
 		"AWS_REGION": "us-east-1",
 		"AWS_DEFAULT_REGION": "us-east-1",
-		"IMAGE_NAME": "localstack/localstack-pro:latest",
+		"IMAGE_NAME": "localstack/localstack:4.4.0",
 		"LOCALSTACK_VOLUME_DIR": "/data"
 	},
 
@@ -31,10 +33,10 @@
 			"samlocal": false,  // if true, add in features manually: ghcr.io/customink/codespaces-features/sam-cli
 			"tflocal": true  // if true, add in features manually: ghcr.io/devcontainers-contrib/features/terraform-asdf
 		},
-		"ghcr.io/devcontainers/features/aws-cli:1": {},
-		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/dhoeric/features/terraform-docs:1": {},
-		"ghcr.io/devcontainers-extra/features/terraform-docs:1": {}
+		"ghcr.io/devcontainers/features/aws-cli:1.1.1": {},
+		"ghcr.io/devcontainers/features/terraform:1.3.10": {},
+		"ghcr.io/dhoeric/features/terraform-docs:1.0.0": {},
+		"ghcr.io/devcontainers-extra/features/terraform-docs:1.0.5": {}
 	},
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.

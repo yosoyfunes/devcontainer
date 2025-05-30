@@ -62,4 +62,12 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
 
 Puedes abrir y trabajar en este proyecto directamente en la nube usando [GitHub Codespaces](https://github.com/features/codespaces). Solo haz clic en el botón **"Code"** y selecciona **"Open with Codespaces"** para iniciar un entorno de desarrollo completo y preconfigurado.
 
+# Devcontainer para LocalStack DinD
+
+Este entorno incluye:
+
+- LocalStack y herramientas relacionadas
+- AWS CLI, Terraform, Terraform-docs
+- **Terragrunt** (preinstalado en la imagen personalizada)
+
 ---
