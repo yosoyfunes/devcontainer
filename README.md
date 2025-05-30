@@ -4,7 +4,7 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
 
 ## Requisitos
 
-> **Nota:** El entorno DevContainer ya incluye **Docker**, **Terraform** y **AWS CLI** preinstalados. No es necesario instalarlos manualmente.
+> **Nota:** El entorno DevContainer ya incluye **Docker**, **Terraform**, **Terragrunt** y **AWS CLI** preinstalados. No es necesario instalarlos manualmente.
 > Además, **LocalStack ya se inicia automáticamente al abrir el DevContainer**.
 
 ## Pasos para iniciar el entorno
@@ -15,16 +15,21 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
 
 2. **Verificar que LocalStack está corriendo**
    - LocalStack se inicia automáticamente al abrir el DevContainer, no necesitas iniciarlo manualmente.
+   - Si necesitas reiniciarlo manualmente, ejecuta:
+     ```sh
+     localstack start -d
+     ```
 
 3. **Configurar AWS CLI (opcional)**
    - Si deseas usar AWS CLI para verificar recursos, configura el endpoint de LocalStack:
      ```sh
      aws configure
      ```
-   - Luego, usa el endpoint de LocalStack en tus comandos:
+   - Luego, podes correr cuaquier comando de aws-cli:
      ```sh
-     aws --endpoint-url=http://localhost:4566 s3 ls
+     aws s3 ls
      ```
+   - No es necesario especificar el endpoint de LocalStack manualmente, ya que la variable de entorno `AWS_ENDPOINT_URL` está configurada automáticamente en el entorno del contenedor.
 
 ## Ejecutar la prueba de Terraform
 
@@ -42,7 +47,7 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
 3. **Verificar el bucket**
    - Puedes listar los buckets usando AWS CLI:
      ```sh
-     aws --endpoint-url=http://localhost:4566 s3 ls
+     aws s3 ls
      ```
 
 ## Referencia
@@ -53,7 +58,7 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
     s3 = "http://s3.localhost.localstack.cloud:4566"
   }
   ```
-- Recuerda que para todos los comandos de AWS CLI debes usar el parámetro:
+- Recuerda que para todos los comandos de AWS CLI estamos  usando el parámetro (seteado en la variable AWS_ENDPOINT_URL):
   ```
   --endpoint-url=http://localhost:4566
   ```
@@ -67,6 +72,7 @@ Puedes abrir y trabajar en este proyecto directamente en la nube usando [GitHub 
 Este entorno incluye:
 
 - LocalStack y herramientas relacionadas
+- Docker
 - AWS CLI, Terraform, Terraform-docs
 - **Terragrunt** (preinstalado en la imagen personalizada)
 
