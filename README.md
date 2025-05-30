@@ -7,6 +7,14 @@ Este proyecto utiliza **DevContainer** para facilitar el desarrollo y pruebas lo
 > **Nota:** El entorno DevContainer ya incluye **Docker**, **Terraform**, **Terragrunt** y **AWS CLI** preinstalados. No es necesario instalarlos manualmente.
 > Además, **LocalStack ya se inicia automáticamente al abrir el DevContainer**.
 
+## Pre-requisitos
+
+Asegúrate de tener instalados los siguientes componentes antes de comenzar:
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Extensión Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) para VSCode
+- [Docker](https://www.docker.com/)
+
 ## Pasos para iniciar el entorno
 
 1. **Abrir en DevContainer**
