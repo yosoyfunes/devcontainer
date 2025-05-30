@@ -14,7 +14,7 @@
 		"LS_LOG": "info",
 		"PERSISTENCE": false,
 		"AWS_ENDPOINT_URL": "http://localhost.localstack.cloud:4566",
-		"AUTO_LOAD_POD": " ",
+		"AUTO_LOAD_POD": "false",
 		"ENFORCE_IAM": false,
 		"AWS_REGION": "us-east-1",
 		"AWS_DEFAULT_REGION": "us-east-1",
